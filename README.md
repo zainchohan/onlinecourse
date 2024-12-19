@@ -1,3 +1,6 @@
+Here’s the updated README file with the credentials section added:  
+
+---
 
 # Online Course Dashboard  
 
@@ -6,8 +9,8 @@ The **Online Course Dashboard** is a comprehensive full-stack web application bu
 ---
 
 ## Features  
-- **Students**: Enroll in courses, view content, and attend the course.  
-- **Teachers**: Create, delete, and manage courses.  
+- **Students**: Enroll in courses, view content, and track progress.  
+- **Teachers**: Create, edit, and manage courses.  
 - **Administrators**: Manage users and courses with advanced control.  
 
 ---
@@ -62,13 +65,29 @@ JWT_KEY=my_super_secret_key_123456
    ```  
 2. The server will run on `http://localhost:5000`.  
 
-### Running the Frontend   
+### Running the Frontend Client  
 1. Start the client:  
    ```bash  
    cd frontend  
    npm start  
    ```  
 2. The client will run on `http://localhost:3000` by default.  
+
+---
+
+## Credentials  
+
+### Admin  
+- **Username:** `admin@gmail.com`  
+- **Password:** `123456`  
+
+### Teacher  
+- **Username:** `teacher@gmail.com`  
+- **Password:** `123456`  
+
+### Student  
+- **Username:** `john@gmail.com`  
+- **Password:** `123456`  
 
 ---
 
