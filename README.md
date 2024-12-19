@@ -87,7 +87,8 @@ JWT_KEY=my_super_secret_key_123456
 
 ### Student  
 - **Username:** `john@gmail.com`  
-- **Password:** `123456`  
+- **Password:** `123456`
+- **Note:**: Alternatively, students can sign up for a new account.  
 
 ---
 
