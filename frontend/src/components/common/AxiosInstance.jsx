@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: 'https://onlinecourse-phv8.onrender.com', 
+  baseURL: 'http://localhost:5000', 
 });
 
 export default axiosInstance;

@@ -19,7 +19,7 @@ const PORT = process.env.PORT || 5000;
 
 // Enable CORS with specific options
 app.use(cors({
-  origin: "https://onlinecoursetest.netlify.app", // Allow requests from frontend at this origin
+  origin: "http://localhost:5173", // Allow requests from frontend at this origin
   methods: ["GET", "POST", "PUT", "DELETE"], // Allowed methods
   allowedHeaders: ["Content-Type", "Authorization"] // Allowed headers
 }));

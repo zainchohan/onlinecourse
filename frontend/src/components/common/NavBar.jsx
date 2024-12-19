@@ -25,19 +25,19 @@ const NavBar = ({ setSelectedComponent }) => {
       <Navbar expand="lg" className="bg-body-tertiary">
          <Container>
             <Navbar.Brand>
-               <h3>LOGO</h3>
+               <h3><NavLink to={'/dashboard'}>LOGO</NavLink></h3>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
                <Nav className="me-auto my-2 my-lg-0 m-auto" style={{ maxHeight: '100px' }} navbarScroll>
-                  <NavLink onClick={() => handleOptionClick('home')}>Home</NavLink>
+                  <NavLink to={'/dashboard'} onClick={() => handleOptionClick('home')}>Home</NavLink>
                   {user.userData.type === 'Teacher' && (
                      <NavLink onClick={() => handleOptionClick('addcourse')}>Add Course</NavLink>
                   )}
                   {user.userData.type === 'Admin' && (
                      <>
                         <NavLink onClick={() => handleOptionClick('cousres')}>Courses</NavLink>
-                        <NavLink onClick={() => handleOptionClick('addcourse')}>Add Course</NavLink>
+                        {/* <NavLink onClick={() => handleOptionClick('addcourse')}>Add Course</NavLink> */}
                      </>
                   )}
                   {user.userData.type === 'Student' && (

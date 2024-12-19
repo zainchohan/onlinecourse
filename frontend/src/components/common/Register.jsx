@@ -35,24 +35,34 @@ const Register = () => {
    };
 
    const handleSubmit = (e) => {
-      e.preventDefault()
-      if (!data?.name || !data?.email || !data?.password || !data?.type) return toast.error("Please fill all fields" , { position: "top-right" });
-      else {
+      e.preventDefault();
+   
+      if (!data?.name || !data?.email || !data?.password || !data?.type) {
+         return toast.error("Please fill all fields", { position: "top-right" });
+      } else {
          axiosInstance.post('/api/user/register', data)
             .then((response) => {
                if (response.data.success) {
-                  toast.success(res.data.message, { position: "top-right" });
-                  navigate('/login')
-
+                  // Show success toast
+                  toast.success("User registered successfully!", { position: "top-right" });
+   
+                  // Redirect to login page after a short delay
+                  setTimeout(() => {
+                     navigate('/login');
+                  }, 2000); // Delay before redirect (2 seconds)
+   
                } else {
-                  console.log(response.data.message)
+                  // Handle any other responses (e.g., failure)
+                  toast.error(response.data.message || "Registration failed", { position: "top-right" });
                }
             })
             .catch((error) => {
                console.log("Error", error);
+               toast.error("An error occurred during registration.", { position: "top-right" });
             });
       }
    };
+   
 
 
    return (
